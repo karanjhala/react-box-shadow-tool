@@ -19,17 +19,27 @@ function App() {
         <input type="range" min="0" max="200" value={BlurOffset} onChange={(e) => setBlurOffset(e.target.value)} />
         <label>Color </label>
         <input type="color" value={ColorValue} onChange={(e) => setColorValue(e.target.value)} />
-        <div class="switch">
+        <div className="switch">
           <label>
             Outline
             <input type="checkbox" checked={InsetToggle} onChange={() => setInsetToggle(!InsetToggle)} />
-            <span class="lever"></span>
+            <span className="lever"></span>
             Inset
           </label>
         </div>
       </div>
       <div className="output">
-        <div className="box" style={{boxShadow: `${InsetToggle?"inset":""} ${HorOffset}px ${VerOffset}px ${BlurOffset}px ${ColorValue}`}}></div>
+        <div className="box" style={{boxShadow: `${InsetToggle?"inset":""} ${HorOffset}px ${VerOffset}px ${BlurOffset}px ${ColorValue}`}}>
+          <p className="css-output">
+            box-shadow: {InsetToggle?"inset":""} {HorOffset}px {VerOffset}px {BlurOffset}px {ColorValue}
+          </p>
+          <p className="css-output">
+            -webkit-box-shadow: {InsetToggle?"inset":""} {HorOffset}px {VerOffset}px {BlurOffset}px {ColorValue}
+          </p>
+          <p className="css-output">
+            -moz-box-shadow: {InsetToggle?"inset":""} {HorOffset}px {VerOffset}px {BlurOffset}px {ColorValue}
+          </p>
+        </div>
       </div>
 
     </div>

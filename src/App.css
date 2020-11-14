@@ -9,9 +9,17 @@
 }
 
 .box {
+  display: flex;
+  flex-direction: column;
   width: 40vw;
   height: 50vh;
   background-color: salmon;
   border-radius: 1%;
   color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.css-output {
+  font-weight: bold;
 }
