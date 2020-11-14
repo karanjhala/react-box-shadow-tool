@@ -1,6 +1,8 @@
 .App {
   display: flex;
+  height: 100vh;
   justify-content: space-around;
+  align-items: center;
 }
 .controls {
   width: 40vw;
